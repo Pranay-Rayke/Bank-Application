@@ -17,7 +17,9 @@ public class Main {
         System.out.println("Current Balance is : "+pranay.getBalance());
 
         //depositMoney
-        System.out.println(pranay.depositMoney(500));
+        System.out.println("Enter deposit amount : ");
+        int depositeAmount = sc.nextInt();
+        System.out.println(pranay.depositMoney(depositeAmount));
         System.out.println("Updated Balance : "+pranay.getBalance());
 
         //withdrawMoney
@@ -28,6 +30,13 @@ public class Main {
 
         System.out.println(pranay.withdrawMoney(amount, enterPassword));
         System.out.println("Updated Balance Is : "+pranay.getBalance());
+
+        //newPassword
+        System.out.println("Enter oldPassword : ");
+        String oldPassword = sc.next();
+        System.out.println("Enter newPassword : ");
+        String newPassword = sc.next();
+        System.out.println(pranay.changePassword(oldPassword,newPassword));
 
         //rateOfIntrest
         System.out.println("Enter a time duration in years for calculate rateOfIntrest : ");

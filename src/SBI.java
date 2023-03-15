@@ -83,7 +83,18 @@ public class SBI implements Bank {
     }
 
     @Override
+    public String changePassword(String oldPassword, String newPassword) {
+        if(oldPassword.equals(this.Password))
+        {
+            this.Password = newPassword;
+            return "Password set successfully";
+        }
+        return "Wrong password";
+    }
+
+
+    @Override
     public double rateOfIntrest(int time) {
-        return (this.Balance * BankrateOfIntrest * time)/100.0;
+        return (this.Balance * BankrateOfIntrest * time)/100;
     }
 }

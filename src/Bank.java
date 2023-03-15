@@ -6,5 +6,7 @@ public interface Bank {
 
     String withdrawMoney(int amount , String enteredPassword);
 
+    public String changePassword(String oldPassword,String newPassword);
+
     double rateOfIntrest(int time);
 }
